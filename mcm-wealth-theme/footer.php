@@ -11,7 +11,7 @@
                         <span class="footer-logo-sub">Management Limited</span>
                     </span>
                 </div>
-                <p class="footer-tagline">Long-term Capital Allocation<br>Hong Kong Single Family Office<br>Est. 2012</p>
+                <p class="footer-tagline">Long-term Capital Allocation<br>Hong Kong Single Family Office<br>Est. 2018</p>
             </div>
 
             <!-- Col 2: Company -->
@@ -48,12 +48,12 @@
                     <div class="footer-contact-item">
                         <span class="flabel">Email</span>
                         <span class="fvalue">
-                            <a href="mailto:info@mcmwealth.com" style="color:inherit;">info@mcmwealth.com</a>
+                            <a href="mailto:info@mwealth.online" style="color:inherit;">info@mwealth.online</a>
                         </span>
                     </div>
                     <div class="footer-contact-item">
                         <span class="flabel">Phone</span>
-                        <span class="fvalue">+852 XXXX XXXX</span>
+                        <span class="fvalue">3105 2028</span>
                     </div>
                 </div>
             </div>

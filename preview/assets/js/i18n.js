@@ -15,12 +15,12 @@
       'footer.company': 'Company',
       'footer.services': 'Services',
       'footer.contact': 'Contact',
-      'footer.tagline': 'Long-term Capital Allocation<br>Hong Kong Single Family Office<br>Est. 2012',
+      'footer.tagline': 'Long-term Capital Allocation<br>Hong Kong Single Family Office<br>Est. 2018',
       'footer.location': 'Location',
       'footer.location.val': 'Hong Kong SAR',
       'footer.email': 'Email',
       'footer.phone': 'Phone',
-      'footer.copyright': '&copy; 2024 MCM Wealth Management Limited. All Rights Reserved.',
+      'footer.copyright': '&copy; 2026 MCM Wealth Management Limited. All Rights Reserved.',
       'footer.disclaimer': 'This website is for informational purposes only and does not constitute financial advice. Past performance is not indicative of future results.',
 
       /* ── Index (Home) ── */
@@ -29,7 +29,7 @@
       'home.hero.p': 'MCM is a single family office focused on long-term capital allocation and strategic investments — including private equity, hedge funds, and other alternative assets. We work with external advisors across the fields we invest in.',
       'home.hero.cta1': 'Speak with our team',
       'home.hero.cta2': 'Learn our philosophy',
-      'home.hero.info.est': 'Est.<br>2026',
+      'home.hero.info.est': 'Est.<br>2018',
       'home.hero.info.founded': 'Founded',
       'home.hero.info.hk': 'HK',
       'home.hero.info.sfo': 'Single Family Office',
@@ -89,7 +89,7 @@
       /* ── About ── */
       'about.hero.eyebrow': 'Hong Kong Single Family Office',
       'about.hero.h1': 'Long-term capital allocation,<br><em class="accent-gold">our strategic focus.</em>',
-      'about.hero.p': 'Established in July 2012, MCM Wealth Management Limited is a Hong Kong-based single family office built on the principle of long-term capital allocation and strategic investments.',
+      'about.hero.p': 'Established in July 2018, MCM Wealth Management Limited is a Hong Kong-based single family office built on the principle of long-term capital allocation and strategic investments.',
       'about.who.eyebrow': 'Who Are We?',
       'about.who.h2': 'A single family office, investing our own capital',
       'about.who.p': 'MCM is a single family office. We focus on long-term capital allocation and strategic investments – including private equity, hedge funds, and other alternative assets. We work with external advisors in the fields mentioned.',
@@ -102,7 +102,7 @@
       'about.footer.p': 'All to ensure transparency in every decision, guiding our family with values that endure as strongly as our wealth.',
       'about.phil.eyebrow': 'Our Philosophy',
       'about.phil.quote': '"A single family office focused on long-term capital allocation and strategic investments."',
-      'about.phil.p': 'Established in July 2012, MCM Wealth Management Limited is a Hong Kong-based single family office. We invest our own capital. Our role is to coordinate our investment focus — including legacy estate, tax strategy, and business succession planning — by partnering with the right external advisors and bringing them together under one coherent framework. By building a network of trusted partners, we are committed to achieving our family\'s generational financial goals. Our direction and value lie in effective, efficient, and sustainable decision-making.',
+      'about.phil.p': 'Established in July 2018, MCM Wealth Management Limited is a Hong Kong-based single family office. We invest our own capital. Our role is to coordinate our investment focus — including legacy estate, tax strategy, and business succession planning — by partnering with the right external advisors and bringing them together under one coherent framework. By building a network of trusted partners, we are committed to achieving our family\'s generational financial goals. Our direction and value lie in effective, efficient, and sustainable decision-making.',
       'about.approach.eyebrow': 'Our Approach',
       'about.approach.h2': 'How we work with your family',
       'about.approach.sub': 'A structured, four-stage process designed to understand your family deeply and build solutions that endure.',
@@ -236,7 +236,7 @@
       'promotions.cta.h2': 'Speak to us about any of these packages',
       'promotions.cta.p': 'Our team will guide you to the offer that best fits your family\'s needs — with no obligation and complete confidentiality.',
       'promotions.cta.btn': 'Contact us today',
-      'footer.tagline.promotions': 'Preserve &middot; Adapt &middot; Scale<br>Hong Kong Single Family Office<br>Est. 2012',
+      'footer.tagline.promotions': 'Preserve &middot; Adapt &middot; Scale<br>Hong Kong Single Family Office<br>Est. 2018',
     },
 
     zh: {
@@ -251,12 +251,12 @@
       'footer.company': '公司',
       'footer.services': '服務',
       'footer.contact': '聯絡方式',
-      'footer.tagline': '長期資本配置<br>香港單一家族辦公室<br>成立於 2012 年',
+      'footer.tagline': '長期資本配置<br>香港單一家族辦公室<br>成立於 2018 年',
       'footer.location': '地點',
       'footer.location.val': '香港特別行政區',
       'footer.email': '電子郵件',
       'footer.phone': '電話',
-      'footer.copyright': '&copy; 2024 MCM Wealth Management Limited. All Rights Reserved.',
+      'footer.copyright': '&copy; 2026 MCM Wealth Management Limited. All Rights Reserved.',
       'footer.disclaimer': '本網站僅供參考，不構成財務建議。過往表現不代表未來業績。',
 
       /* ── Index (Home) ── */
@@ -265,7 +265,7 @@
       'home.hero.p': 'MCM 是一個單一家族辦公室，專注於長期資本配置與策略性投資——包括私募股權、對沖基金及其他另類資產。我們在投資領域與外部顧問合作。',
       'home.hero.cta1': '與我們的團隊交流',
       'home.hero.cta2': '了解我們的理念',
-      'home.hero.info.est': '成立於<br>2026',
+      'home.hero.info.est': '成立於<br>2018',
       'home.hero.info.founded': '成立年份',
       'home.hero.info.hk': '香港',
       'home.hero.info.sfo': '單一家族辦公室',
@@ -325,7 +325,7 @@
       /* ── About ── */
       'about.hero.eyebrow': '香港單一家族辦公室',
       'about.hero.h1': '長期資本配置，<br><em class="accent-gold">我們的策略焦點。</em>',
-      'about.hero.p': 'MCM Wealth Management Limited 成立於 2012 年 7 月，是一家總部位於香港的單一家族辦公室，建立在長期資本配置與策略性投資的原則之上。',
+      'about.hero.p': 'MCM Wealth Management Limited 成立於 2018 年 7 月，是一家總部位於香港的單一家族辦公室，建立在長期資本配置與策略性投資的原則之上。',
       'about.who.eyebrow': '我們是誰？',
       'about.who.h2': '一個單一家族辦公室，投資自有資本',
       'about.who.p': 'MCM 是一個單一家族辦公室。我們專注於長期資本配置與策略性投資——包括私募股權、對沖基金及其他另類資產。我們在上述領域與外部顧問合作。',
@@ -338,7 +338,7 @@
       'about.footer.p': '一切為了確保每個決策的透明度，以與財富同樣持久的價值觀引導我們的家族。',
       'about.phil.eyebrow': '我們的理念',
       'about.phil.quote': '"一家專注於長期資本配置與策略性投資的單一家族辦公室。"',
-      'about.phil.p': 'MCM Wealth Management Limited 成立於 2012 年 7 月，是一家總部位於香港的單一家族辦公室。我們投資自有資本。我們的角色是協調我們的投資重點——包括遺產規劃、稅務策略與企業接班規劃——透過與合適的外部顧問合作，並將他們匯聚在一個統一的框架下。透過建立值得信賴的合作夥伴網絡，我們致力於實現家族跨世代的財務目標。我們的方向與價值在於有效、高效率且可持續的決策。',
+      'about.phil.p': 'MCM Wealth Management Limited 成立於 2018 年 7 月，是一家總部位於香港的單一家族辦公室。我們投資自有資本。我們的角色是協調我們的投資重點——包括遺產規劃、稅務策略與企業接班規劃——透過與合適的外部顧問合作，並將他們匯聚在一個統一的框架下。透過建立值得信賴的合作夥伴網絡，我們致力於實現家族跨世代的財務目標。我們的方向與價值在於有效、高效率且可持續的決策。',
       'about.approach.eyebrow': '我們的方法',
       'about.approach.h2': '我們如何與您的家族合作',
       'about.approach.sub': '一個結構化的四階段流程，旨在深入了解您的家族，並建立持久的解決方案。',
@@ -472,7 +472,7 @@
       'promotions.cta.h2': '就任何方案與我們洽談',
       'promotions.cta.p': '我們的團隊將為您推薦最適合您家族需求的優惠——無義務，完全保密。',
       'promotions.cta.btn': '立即聯絡我們',
-      'footer.tagline.promotions': '保存 &middot; 適應 &middot; 擴展<br>香港單一家族辦公室<br>成立於 2012 年',
+      'footer.tagline.promotions': '保存 &middot; 適應 &middot; 擴展<br>香港單一家族辦公室<br>成立於 2018 年',
     }
   };
 

@@ -24,7 +24,7 @@
 
                 <div class="hero-info-strip">
                     <div class="hero-info-item">
-                        <span class="value">Est.<br>2012</span>
+                        <span class="value">Est.<br>2018</span>
                         <span class="label">Founded</span>
                     </div>
                     <div class="hero-info-item">

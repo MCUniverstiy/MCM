@@ -28,7 +28,7 @@ if ( isset( $_POST['mcm_contact_submit'] ) ) {
         } elseif ( empty( $message ) ) {
             $form_error = 'Please enter a message.';
         } else {
-            $to      = 'info@mcmwealth.com';
+            $to      = 'info@mwealth.online';
             $subject = 'Website enquiry from ' . $name;
             $body    = "Name: {$name}\nEmail: {$email}\nPhone: {$phone}\n\nMessage:\n{$message}";
             $headers = [ 'Content-Type: text/plain; charset=UTF-8', 'From: ' . $name . ' <' . $email . '>' ];
@@ -37,7 +37,7 @@ if ( isset( $_POST['mcm_contact_submit'] ) ) {
             if ( $sent ) {
                 $form_sent = true;
             } else {
-                $form_error = 'We could not send your message right now. Please email us directly at info@mcmwealth.com.';
+                $form_error = 'We could not send your message right now. Please email us directly at info@mwealth.online.';
             }
         }
 
@@ -84,14 +84,14 @@ if ( isset( $_POST['mcm_contact_submit'] ) ) {
                         <div class="contact-icon" aria-hidden="true">&#9993;</div>
                         <div class="contact-detail-text">
                             <span class="label">Email</span>
-                            <span class="value"><a href="mailto:info@mcmwealth.com" style="color:var(--orange);">info@mcmwealth.com</a></span>
+                            <span class="value"><a href="mailto:info@mwealth.online" style="color:var(--orange);">info@mwealth.online</a></span>
                         </div>
                     </div>
                     <div class="contact-detail-item">
                         <div class="contact-icon" aria-hidden="true">&#9990;</div>
                         <div class="contact-detail-text">
                             <span class="label">Phone</span>
-                            <span class="value">+852 XXXX XXXX</span>
+                            <span class="value">3105 2028</span>
                         </div>
                     </div>
                 </div>

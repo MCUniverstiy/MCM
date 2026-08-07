@@ -12,7 +12,7 @@ get_header();
     <div class="container">
         <span class="eyebrow reveal">Hong Kong Single Family Office</span>
         <h1 class="reveal reveal-delay-1">Long-term capital allocation,<br><em class="accent-gold">our strategic focus.</em></h1>
-        <p class="reveal reveal-delay-2">Established in July 2012, MCM Wealth Management Limited is a Hong Kong-based single family office built on the principle of long-term capital allocation and strategic investments.</p>
+        <p class="reveal reveal-delay-2">Established in July 2018, MCM Wealth Management Limited is a Hong Kong-based single family office built on the principle of long-term capital allocation and strategic investments.</p>
     </div>
 </section>
 
@@ -61,7 +61,7 @@ get_header();
             &#8220;A single family office focused on long-term capital allocation and strategic investments.&#8221;
         </blockquote>
         <p class="reveal reveal-delay-2">
-            Established in July 2012, MCM Wealth Management Limited is a Hong Kong-based single family office. We invest our own capital. Our role is to coordinate our investment focus — including legacy estate, tax strategy, and business succession planning — by partnering with the right external advisors and bringing them together under one coherent framework. By building a network of trusted partners, we are committed to achieving our family's generational financial goals. Our direction and value lie in effective, efficient, and sustainable decision-making.
+            Established in July 2018, MCM Wealth Management Limited is a Hong Kong-based single family office. We invest our own capital. Our role is to coordinate our investment focus — including legacy estate, tax strategy, and business succession planning — by partnering with the right external advisors and bringing them together under one coherent framework. By building a network of trusted partners, we are committed to achieving our family's generational financial goals. Our direction and value lie in effective, efficient, and sustainable decision-making.
         </p>
     </div>
 </section>

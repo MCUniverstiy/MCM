@@ -1,203 +1,68 @@
 <?php
 /**
- * Template Name: Promotions
+ * Template Name: Partnerships & Opportunities
  */
 get_header();
 ?>
 
-<!-- ═══════════════════════════════════════
-     PAGE HERO — dark bg
-═══════════════════════════════════════ -->
-<section class="hero-page--dark" aria-label="Promotions hero">
-    <div class="container">
-        <span class="eyebrow reveal">Exclusive Packages</span>
-        <h1 class="reveal reveal-delay-1">Exclusive packages designed for<br><em class="accent-gold">your family's next step.</em></h1>
-        <p class="reveal reveal-delay-2" style="color:var(--text-on-dark-muted); font-size:18px; margin-top:16px; max-width:580px;">
-            We have created a range of bundled solutions to help families take the first step — or the next step — towards comprehensive wealth coordination.
-        </p>
+<section class="page-hero page-hero--dark" aria-labelledby="partnerships-title">
+    <div class="container page-hero-grid">
+        <div class="page-hero-copy">
+            <span class="eyebrow reveal" data-i18n="partnerships.hero.eyebrow">Partnerships &amp; opportunities</span>
+            <h1 id="partnerships-title" class="reveal reveal-delay-1" data-i18n="partnerships.hero.title">Good ideas travel<br><em class="accent-gold">through trusted networks.</em></h1>
+            <p class="reveal reveal-delay-2" data-i18n="partnerships.hero.body">We welcome considered introductions to investment opportunities, candid exchange with other family offices, and collaboration with capable, aligned partners.</p>
+        </div>
+        <div class="page-hero-media reveal reveal-delay-2"><img src="<?php echo esc_url( get_template_directory_uri() . '/assets/images/mcm-opportunities.jpg' ); ?>" alt="An open architectural threshold looking toward the Hong Kong harbour horizon" width="1536" height="1024"></div>
     </div>
 </section>
 
-
-<!-- ═══════════════════════════════════════
-     PROMO GRID
-═══════════════════════════════════════ -->
-<section class="section--white" aria-labelledby="promos-heading">
+<section class="section--white" aria-labelledby="collaboration-title">
     <div class="container">
-        <h2 id="promos-heading" class="sr-only">Our Promotional Packages</h2>
-
-        <div class="promos-grid">
-
-            <!-- 1: Family Wealth Academy -->
-            <div class="promo-card reveal reveal-delay-1">
-                <div class="promo-card-top">
-                    <span class="promo-tag">Family Education</span>
-                    <span class="promo-badge">20% Off + Free Consultation</span>
-                </div>
-                <h3>Family Wealth Academy</h3>
-                <p class="promo-subtitle">Your family's financial education, reimagined.</p>
-                <p>Receive a complimentary first consultation plus 20% off our flagship financial education programme — including a personalised family wealth roadmap tailored to your goals and circumstances.</p>
-                <div class="promo-highlight">
-                    Complimentary first consultation + 20% off the flagship financial education programme, including a personalised family wealth roadmap.
-                </div>
-                <a href="<?php echo esc_url( home_url( '/contact/' ) ); ?>" class="btn btn-primary" style="align-self:flex-start;">Enquire now</a>
-            </div>
-
-            <!-- 2: Legacy Planning Package -->
-            <div class="promo-card reveal reveal-delay-2">
-                <div class="promo-card-top">
-                    <span class="promo-tag">Estate &amp; Legacy</span>
-                    <span class="promo-badge">15% Reduced Fee</span>
-                </div>
-                <h3>Legacy Planning Package</h3>
-                <p class="promo-subtitle">Generational Continuity Package</p>
-                <p>A comprehensive, bundled solution covering wills, trusts, succession structures, and tax planning — all coordinated under one roof at a reduced combined fee, ensuring your legacy is protected from every angle.</p>
-                <div class="promo-highlight">
-                    Bundled wills, trusts, succession structures + tax planning at 15% reduced fee.
-                </div>
-                <a href="<?php echo esc_url( home_url( '/contact/' ) ); ?>" class="btn btn-primary" style="align-self:flex-start;">Enquire now</a>
-            </div>
-
-            <!-- 3: Wealth Coordination Offer -->
-            <div class="promo-card reveal reveal-delay-1">
-                <div class="promo-card-top">
-                    <span class="promo-tag">Wealth Coordination</span>
-                    <span class="promo-badge">10% Discount</span>
-                </div>
-                <h3>Wealth Coordination Offer</h3>
-                <p class="promo-subtitle">Holistic structuring, intelligently bundled.</p>
-                <p>Receive a 10% discount on comprehensive wealth structuring when combined with our investment advisory service, plus free quarterly family wealth review sessions to keep your strategy on track.</p>
-                <div class="promo-highlight">
-                    10% discount on wealth structuring + investment advisory, plus free quarterly family wealth reviews.
-                </div>
-                <a href="<?php echo esc_url( home_url( '/contact/' ) ); ?>" class="btn btn-primary" style="align-self:flex-start;">Enquire now</a>
-            </div>
-
-            <!-- 4: Global Advisory Package -->
-            <div class="promo-card reveal reveal-delay-2">
-                <div class="promo-card-top">
-                    <span class="promo-tag">International Advisory</span>
-                    <span class="promo-badge">12% Off + Briefing</span>
-                </div>
-                <h3>Global Advisory Package</h3>
-                <p class="promo-subtitle">Global Reach Package</p>
-                <p>12% off cross-border advisory covering international tax planning, residency strategies, and global investment structures, plus one complimentary global market briefing tailored to your family's footprint.</p>
-                <div class="promo-highlight">
-                    12% off cross-border advisory + one complimentary global market briefing.
-                </div>
-                <a href="<?php echo esc_url( home_url( '/contact/' ) ); ?>" class="btn btn-primary" style="align-self:flex-start;">Enquire now</a>
-            </div>
-
-            <!-- 5: Enterprise Solutions -->
-            <div class="promo-card reveal reveal-delay-1">
-                <div class="promo-card-top">
-                    <span class="promo-tag">Business &amp; Enterprise</span>
-                    <span class="promo-badge">Reduced Fees</span>
-                </div>
-                <h3>Enterprise Solutions</h3>
-                <p class="promo-subtitle">Built for family-owned enterprises.</p>
-                <p>Reduced corporate advisory fees for family-owned enterprises seeking succession planning, governance structures, and business valuation strategies — recognising the unique challenges of family business management.</p>
-                <div class="promo-highlight">
-                    Reduced corporate advisory fees for family-owned enterprises.
-                </div>
-                <a href="<?php echo esc_url( home_url( '/contact/' ) ); ?>" class="btn btn-primary" style="align-self:flex-start;">Enquire now</a>
-            </div>
-
-            <!-- 6: Health & Wellbeing Programs -->
-            <div class="promo-card reveal reveal-delay-2">
-                <div class="promo-card-top">
-                    <span class="promo-tag">Wellbeing</span>
-                    <span class="promo-badge">25% Off</span>
-                </div>
-                <h3>Health &amp; Wellbeing Programs</h3>
-                <p class="promo-subtitle">Holistic health for families who value the full picture.</p>
-                <p>25% off our introductory holistic health and personalised wellbeing coaching package — because enduring wealth includes the health and vitality of every family member across every generation.</p>
-                <div class="promo-highlight">
-                    25% off introductory holistic health + personalised wellbeing coaching package.
-                </div>
-                <a href="<?php echo esc_url( home_url( '/contact/' ) ); ?>" class="btn btn-primary" style="align-self:flex-start;">Enquire now</a>
-            </div>
-
-        </div><!-- .promos-grid -->
-
-        <p class="terms-note reveal">Terms and conditions apply. All offers are subject to eligibility and availability. Please contact us for full details.</p>
-
-    </div>
-</section>
-
-
-<!-- ═══════════════════════════════════════
-     CTA STRIP
-═══════════════════════════════════════ -->
-<section class="cta-strip" aria-labelledby="promos-cta-heading">
-    <div class="container">
-        <div class="reveal">
-            <span class="eyebrow">Get in Touch</span>
-            <h2 id="promos-cta-heading">Speak to us about any of these packages</h2>
-            <p>Our team will guide you to the offer that best fits your family's needs — with no obligation and complete confidentiality.</p>
-            <a href="<?php echo esc_url( home_url( '/contact/' ) ); ?>" class="btn btn-primary">Contact us today</a>
+        <div class="section-heading reveal"><div><span class="eyebrow" data-i18n="partnerships.collab.eyebrow">How we connect</span><h2 id="collaboration-title" data-i18n="partnerships.collab.title">Sharing, opportunity, collaboration</h2></div><p data-i18n="partnerships.collab.body">There are no promotions or packages here. These are the conversations that are relevant to a private family office.</p></div>
+        <div class="collaboration-grid">
+            <article class="collaboration-card reveal"><span class="card-index">01</span><h3 data-i18n="partnerships.collab.1.title">Investment opportunities</h3><p data-i18n="partnerships.collab.1.body">We welcome clear introductions to companies, funds, direct transactions, and other opportunities that may suit a long-term family mandate.</p></article>
+            <article class="collaboration-card reveal reveal-delay-1"><span class="card-index">02</span><h3 data-i18n="partnerships.collab.2.title">Family-office exchange</h3><p data-i18n="partnerships.collab.2.body">We value reciprocal dialogue with family-office peers around experience, perspective, and questions of shared relevance.</p></article>
+            <article class="collaboration-card reveal reveal-delay-2"><span class="card-index">03</span><h3 data-i18n="partnerships.collab.3.title">Specialist collaboration</h3><p data-i18n="partnerships.collab.3.body">We are open to relationships with investment, legal, tax, governance, and other specialists whose expertise may support our own mandate.</p></article>
         </div>
     </div>
 </section>
 
-<!-- ═══════════════════════════════════════
-     NEWSLETTER
-═══════════════════════════════════════ -->
-<section class="newsletter-section" aria-labelledby="newsletter-heading">
-    <div class="container">
-        <div class="newsletter-inner">
-
-            <div class="newsletter-left reveal">
-                <span class="eyebrow">Stay Informed</span>
-                <h2 id="newsletter-heading">Exclusive insights,<br><em>delivered to your family.</em></h2>
-                <p>Join our private newsletter and be the first to hear about new packages, market intelligence, and wealth strategies — curated exclusively for single family offices and like-minded families.</p>
-                <ul class="newsletter-perks">
-                    <li>Early access to new promotions &amp; bundled packages</li>
-                    <li>Quarterly market &amp; investment insights</li>
-                    <li>Estate, tax, and succession planning updates</li>
-                    <li>Invitations to private family office briefings</li>
-                </ul>
-            </div>
-
-            <div class="newsletter-form-wrap reveal reveal-delay-2">
-                <h3>Subscribe to our newsletter</h3>
-                <p>No spam. Unsubscribe at any time. Strictly confidential.</p>
-
-                <?php
-                $nl_success = false;
-                if ( isset($_POST['nl_nonce']) && wp_verify_nonce($_POST['nl_nonce'], 'mcm_newsletter') ) {
-                    $nl_email = sanitize_email($_POST['nl_email'] ?? '');
-                    $nl_name  = sanitize_text_field($_POST['nl_name'] ?? '');
-                    if ( is_email($nl_email) ) {
-                        $nl_success = true;
-                    }
-                }
-                ?>
-
-                <?php if ( $nl_success ) : ?>
-                <div class="nl-success" style="display:block;">
-                    <div class="nl-tick">&#10003;</div>
-                    <p>You're on the list. Welcome to the MCM circle.</p>
-                </div>
-                <?php else : ?>
-                <form class="newsletter-form" method="post" id="nl-form">
-                    <?php wp_nonce_field('mcm_newsletter', 'nl_nonce'); ?>
-                    <div class="nl-field">
-                        <label for="nl-name">Full Name</label>
-                        <input type="text" id="nl-name" name="nl_name" placeholder="Your full name" autocomplete="name">
-                    </div>
-                    <div class="nl-field">
-                        <label for="nl-email">Email Address</label>
-                        <input type="email" id="nl-email" name="nl_email" placeholder="your@email.com" autocomplete="email" required>
-                    </div>
-                    <button type="submit" class="nl-submit">Subscribe — It's Free</button>
-                    <p class="nl-privacy">By subscribing you agree to receive occasional communications from MCM Wealth Management Limited. We will never share your details with third parties.</p>
-                </form>
-                <?php endif; ?>
-            </div>
-
+<section class="section" aria-labelledby="exchange-title">
+    <div class="container split-feature">
+        <div class="split-feature-media reveal"><img src="<?php echo esc_url( get_template_directory_uri() . '/assets/images/mcm-shared-perspective.jpg' ); ?>" alt="A circular table set for a private exchange of ideas" width="1536" height="1024" loading="lazy"></div>
+        <div class="identity-copy reveal reveal-delay-1">
+            <span class="eyebrow" data-i18n="partnerships.exchange.eyebrow">A culture of sharing</span>
+            <h2 id="exchange-title" data-i18n="partnerships.exchange.title">Exchange without turning insight into a sales pitch.</h2>
+            <p data-i18n="partnerships.exchange.body1">We believe family offices can learn from one another while respecting privacy, independence, and different mandates.</p>
+            <p data-i18n="partnerships.exchange.body2">The aim is mutual perspective—not client acquisition, intermediation, or the sale of advisory products.</p>
+            <a href="<?php echo esc_url( home_url( '/contact/' ) ); ?>" class="text-link"><span data-i18n="partnerships.exchange.link">Open a dialogue</span> →</a>
         </div>
     </div>
 </section>
+
+<section class="section--dark" aria-labelledby="criteria-title">
+    <div class="container criteria-layout">
+        <div class="criteria-copy reveal"><span class="eyebrow" data-i18n="partnerships.criteria.eyebrow">What earns attention</span><h2 id="criteria-title" data-i18n="partnerships.criteria.title">Relevance before volume.</h2><p data-i18n="partnerships.criteria.body">We prefer a small number of well-framed introductions to a large flow of generic proposals.</p></div>
+        <div class="criteria-grid reveal reveal-delay-1"><div class="criterion"><strong data-i18n="partnerships.criteria.1.title">Clear relevance</strong><span data-i18n="partnerships.criteria.1.body">Why the opportunity may fit a patient family-capital perspective.</span></div><div class="criterion"><strong data-i18n="partnerships.criteria.2.title">Aligned people</strong><span data-i18n="partnerships.criteria.2.body">Principals with integrity, capability, and meaningful alignment.</span></div><div class="criterion"><strong data-i18n="partnerships.criteria.3.title">Durable rationale</strong><span data-i18n="partnerships.criteria.3.body">A clear source of value that can withstand thoughtful scrutiny.</span></div><div class="criterion"><strong data-i18n="partnerships.criteria.4.title">Transparent context</strong><span data-i18n="partnerships.criteria.4.body">Useful information on structure, risks, timing, and counterparties.</span></div></div>
+    </div>
+</section>
+
+<section class="section--white" aria-labelledby="introduction-title">
+    <div class="container">
+        <div class="section-intro reveal"><span class="eyebrow" data-i18n="partnerships.intro.eyebrow">Making an introduction</span><h2 id="introduction-title" data-i18n="partnerships.intro.title">A concise first note is enough.</h2><p data-i18n="partnerships.intro.body">Help us understand the opportunity and its relevance. Confidential or sensitive materials should only be shared after appropriate arrangements are in place.</p></div>
+        <ol class="intro-checklist"><li class="reveal"><strong data-i18n="partnerships.intro.1.title">Who you are</strong><span data-i18n="partnerships.intro.1.body">Briefly introduce the principals and your role.</span></li><li class="reveal reveal-delay-1"><strong data-i18n="partnerships.intro.2.title">What it is</strong><span data-i18n="partnerships.intro.2.body">Summarise the company, fund, transaction, or collaboration.</span></li><li class="reveal reveal-delay-2"><strong data-i18n="partnerships.intro.3.title">Why MCM</strong><span data-i18n="partnerships.intro.3.body">Explain why it may be relevant to our long-term perspective.</span></li><li class="reveal reveal-delay-3"><strong data-i18n="partnerships.intro.4.title">What comes next</strong><span data-i18n="partnerships.intro.4.body">Set out timing and the most useful next step.</span></li></ol>
+    </div>
+</section>
+
+<section class="cta-band" aria-labelledby="partnerships-cta-title">
+    <div class="container cta-band-content reveal">
+        <span class="eyebrow" data-i18n="partnerships.cta.eyebrow">Start with context</span>
+        <h2 id="partnerships-cta-title" data-i18n="partnerships.cta.title">Introduce an opportunity or propose an exchange.</h2>
+        <p data-i18n="partnerships.cta.body">We review relevant messages with discretion. An introduction does not imply interest, commitment, or an offer to transact.</p>
+        <a href="<?php echo esc_url( home_url( '/contact/' ) ); ?>" class="btn btn-primary" data-i18n="partnerships.cta.button">Contact MCM</a>
+    </div>
+</section>
+
+<div class="compliance-strip"><div class="container"><p data-i18n="partnerships.disclaimer">MCM invests its own family capital and does not accept public subscriptions through this website. Nothing on this page is an offer, solicitation, or invitation to buy or sell any investment.</p></div></div>
 
 <?php get_footer(); ?>

@@ -1,89 +1,60 @@
-<footer class="site-footer" role="contentinfo">
+</main>
+
+<footer class="site-footer">
     <div class="container">
         <div class="footer-grid">
-
-            <!-- Col 1: Logo + tagline -->
             <div class="footer-logo-col">
                 <div class="footer-logo-brand">
-                    <span class="logo-bar" style="height:36px;" aria-hidden="true"></span>
+                    <img class="logo-mark" src="<?php echo esc_url( get_template_directory_uri() . '/assets/images/logo_icon.jpg' ); ?>" alt="" width="45" height="45" aria-hidden="true">
                     <span class="logo-text">
                         <span class="footer-logo-name">MCM Wealth</span>
                         <span class="footer-logo-sub">Management Limited</span>
                     </span>
                 </div>
-                <p class="footer-tagline">Long-term Capital Allocation<br>Hong Kong Single Family Office<br>Est. 2018</p>
+                <p class="footer-tagline" data-i18n="footer.tagline">Private family capital<br>Hong Kong Single Family Office<br>Established July 2018</p>
             </div>
 
-            <!-- Col 2: Company -->
             <div class="footer-col">
-                <span class="footer-col-title">Company</span>
-                <nav class="footer-links" aria-label="Company links">
-                    <a href="<?php echo esc_url( home_url( '/' ) ); ?>">Home</a>
-                    <a href="<?php echo esc_url( home_url( '/about-us/' ) ); ?>">About Us</a>
-                    <a href="<?php echo esc_url( home_url( '/promotions/' ) ); ?>">Promotions</a>
-                    <a href="<?php echo esc_url( home_url( '/contact/' ) ); ?>">Contact</a>
+                <span class="footer-col-title" data-i18n="footer.explore">Explore</span>
+                <nav class="footer-links" aria-label="<?php esc_attr_e( 'Footer company links', 'mcm-wealth-theme' ); ?>">
+                    <a href="<?php echo esc_url( home_url( '/' ) ); ?>" data-i18n="nav.home">Home</a>
+                    <a href="<?php echo esc_url( home_url( '/about-us/' ) ); ?>" data-i18n="nav.about">About</a>
+                    <a href="<?php echo esc_url( home_url( '/services/' ) ); ?>" data-i18n="nav.approach">Investment Approach</a>
+                    <a href="<?php echo esc_url( home_url( '/promotions/' ) ); ?>" data-i18n="nav.partnerships">Partnerships</a>
                 </nav>
             </div>
 
-            <!-- Col 3: Services -->
             <div class="footer-col">
-                <span class="footer-col-title">Services</span>
-                <nav class="footer-links" aria-label="Services links">
-                    <a href="<?php echo esc_url( home_url( '/services/' ) ); ?>">Family Office Oversight</a>
-                    <a href="<?php echo esc_url( home_url( '/services/' ) ); ?>">Wealth Coordination</a>
-                    <a href="<?php echo esc_url( home_url( '/services/' ) ); ?>">Estate &amp; Legacy</a>
-                    <a href="<?php echo esc_url( home_url( '/services/' ) ); ?>">Business Succession Planning</a>
-                    <a href="<?php echo esc_url( home_url( '/services/' ) ); ?>">Tax Strategy</a>
+                <span class="footer-col-title" data-i18n="footer.perspective">Our Perspective</span>
+                <nav class="footer-links" aria-label="<?php esc_attr_e( 'Investment approach links', 'mcm-wealth-theme' ); ?>">
+                    <a href="<?php echo esc_url( home_url( '/services/' ) ); ?>" data-i18n="focus.1.title">Family Office Stewardship</a>
+                    <a href="<?php echo esc_url( home_url( '/services/' ) ); ?>" data-i18n="focus.2.title">Capital Allocation</a>
+                    <a href="<?php echo esc_url( home_url( '/services/' ) ); ?>" data-i18n="focus.3.title">Legacy &amp; Continuity</a>
+                    <a href="<?php echo esc_url( home_url( '/services/' ) ); ?>" data-i18n="focus.4.title">Enterprise Perspective</a>
+                    <a href="<?php echo esc_url( home_url( '/services/' ) ); ?>" data-i18n="focus.5.title">Specialist Coordination</a>
                 </nav>
             </div>
 
-            <!-- Col 4: Contact -->
             <div class="footer-col">
-                <span class="footer-col-title">Contact</span>
+                <span class="footer-col-title" data-i18n="footer.contact">Contact</span>
                 <div class="footer-contact-items">
-                    <div class="footer-contact-item">
-                        <span class="flabel">Location</span>
-                        <span class="fvalue">Hong Kong SAR</span>
-                    </div>
-                    <div class="footer-contact-item">
-                        <span class="flabel">Email</span>
-                        <span class="fvalue">
-                            <a href="mailto:info@mwealth.online" style="color:inherit;">info@mwealth.online</a>
-                        </span>
-                    </div>
-                    <div class="footer-contact-item">
-                        <span class="flabel">Phone</span>
-                        <span class="fvalue">3105 2028</span>
-                    </div>
+                    <div class="footer-contact-item"><span class="flabel" data-i18n="footer.location">Location</span><span class="fvalue" data-i18n="footer.location_value">Hong Kong SAR</span></div>
+                    <div class="footer-contact-item"><span class="flabel" data-i18n="footer.email">Email</span><span class="fvalue"><a href="mailto:info@mwealth.online">info@mwealth.online</a></span></div>
+                    <div class="footer-contact-item"><span class="flabel" data-i18n="footer.phone">Phone</span><span class="fvalue"><a href="tel:+85231052028">3105&nbsp;2028</a></span></div>
                 </div>
             </div>
-
-        </div><!-- .footer-grid -->
-
-        <div class="footer-bottom">
-            <p class="copyright">
-                &copy; <?php echo esc_html( date( 'Y' ) ); ?> MCM Wealth Management Limited. All Rights Reserved.
-            </p>
-            <p class="disclaimer">
-                This website is for informational purposes only and does not constitute financial advice. Past performance is not indicative of future results.
-            </p>
         </div>
 
+        <div class="footer-bottom">
+            <p class="copyright" data-i18n="footer.copyright">&copy; <?php echo esc_html( wp_date( 'Y' ) ); ?> MCM Wealth Management Limited. All rights reserved.</p>
+            <p class="disclaimer" data-i18n="footer.disclaimer">MCM is a single family office investing its own capital. This website is for general information only and is not an offer, solicitation, recommendation, or investment, legal, or tax advice.</p>
+        </div>
     </div>
 </footer>
 
-<button id="mcm-top" style="position:fixed;bottom:28px;right:28px;width:46px;height:46px;border-radius:50%;background:#C4641A;border:none;color:#FDF4EC;display:none;align-items:center;justify-content:center;cursor:pointer;z-index:9999;box-shadow:0 4px 18px rgba(28,18,8,0.28);transition:background .2s" aria-label="Back to top">
-    <svg width="18" height="18" viewBox="0 0 18 18" fill="none"><polyline points="3,13 9,6 15,13" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+<button class="back-to-top" id="mcm-top" type="button" aria-label="<?php esc_attr_e( 'Back to top', 'mcm-wealth-theme' ); ?>">
+    <svg width="17" height="17" viewBox="0 0 18 18" fill="none" aria-hidden="true"><path d="M3 12.5 9 6l6 6.5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
 </button>
-<script>
-(function(){
-  var b=document.getElementById("mcm-top");
-  window.addEventListener("scroll",function(){b.style.display=window.scrollY>300?"flex":"none";},{passive:true});
-  b.onmouseenter=function(){this.style.background="#8B4520";};
-  b.onmouseleave=function(){this.style.background="#C4641A";};
-  b.onclick=function(){window.scrollTo({top:0,behavior:"smooth"});};
-})();
-</script>
 
 <?php wp_footer(); ?>
 </body>

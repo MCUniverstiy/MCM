@@ -1,126 +1,49 @@
 <?php
 /**
- * Template Name: Services
+ * Template Name: Investment Approach
  */
 get_header();
 ?>
 
-<!-- ═══════════════════════════════════════
-     PAGE HERO
-═══════════════════════════════════════ -->
-<section class="hero-page" aria-label="Services hero">
-    <div class="container">
-        <span class="eyebrow reveal">Investment Focus</span>
-        <h1 class="reveal reveal-delay-1">We are a single family office.<br>Here is where we allocate our capital.</h1>
-        <p class="reveal reveal-delay-2">Five interconnected areas of focus — working together to preserve, coordinate, and grow our family's capital across generations.</p>
-    </div>
-</section>
-
-
-<!-- ═══════════════════════════════════════
-     SERVICE CARDS — Full Detail
-═══════════════════════════════════════ -->
-<section class="section--white" aria-labelledby="services-list-heading">
-    <div class="container">
-        <h2 id="services-list-heading" class="sr-only">Our Services</h2>
-
-        <div class="services-list">
-
-            <!-- 01 Family Office Oversight -->
-            <div class="service-full-card reveal">
-                <div class="service-full-left">
-                    <span class="number">01</span>
-                    <h3>Family Office Oversight</h3>
-                </div>
-                <div class="service-full-right">
-                    <p class="teaser">How do we coordinate our family's wealth as circumstances change?</p>
-                    <p>We oversee and coordinate our family's wealth with structures that adapt to changing circumstances.</p>
-                    <ul class="service-bullets">
-                        <li>Long-term capital allocation</li>
-                        <li>Strategic investments (private equity, hedge funds, etc.)</li>
-                        <li>Family wealth preservation</li>
-                        <li>Multi-generational planning</li>
-                    </ul>
-                </div>
-            </div>
-
-            <!-- 02 Wealth Coordination -->
-            <div class="service-full-card reveal">
-                <div class="service-full-left">
-                    <span class="number">02</span>
-                    <h3>Wealth Coordination</h3>
-                </div>
-                <div class="service-full-right">
-                    <p class="teaser">How do we align every aspect of our wealth?</p>
-                    <p>We work with external advisors to align all aspects of our wealth.</p>
-                    <ul class="service-bullets">
-                        <li>Equities</li>
-                        <li>Bonds</li>
-                        <li>Fixed interest products</li>
-                        <li>Commodities</li>
-                        <li>Alternative investments (private equity, hedge funds)</li>
-                        <li>Property</li>
-                    </ul>
-                </div>
-            </div>
-
-        </div><!-- .services-list -->
-
-        <!-- 03–05: 3-column grid -->
-        <div class="services-grid-3col">
-
-            <!-- 03 Estate & Legacy -->
-            <div class="service-full-card reveal reveal-delay-1" style="grid-template-columns:1fr; gap:20px; padding:36px 32px;">
-                <div class="service-full-left">
-                    <span class="number" style="font-size:56px;">03</span>
-                    <h3>Estate &amp; Legacy</h3>
-                </div>
-                <div class="service-full-right">
-                    <p class="teaser">How do we safeguard our family's values across generations?</p>
-                    <p>We design estate and legacy strategies that safeguard assets, minimise risks, and ensure continuity of values across generations — working with external legal and trust advisors.</p>
-                </div>
-            </div>
-
-            <!-- 04 Business Succession Planning -->
-            <div class="service-full-card reveal reveal-delay-2" style="grid-template-columns:1fr; gap:20px; padding:36px 32px;">
-                <div class="service-full-left">
-                    <span class="number" style="font-size:56px;">04</span>
-                    <h3>Business Succession Planning</h3>
-                </div>
-                <div class="service-full-right">
-                    <p class="teaser">How do we prepare the next generation for success?</p>
-                    <p>We structure succession plans that protect business value, secure continuity, and prepare the next generation for success — alongside external legal and tax specialists.</p>
-                </div>
-            </div>
-
-            <!-- 05 Tax Strategy -->
-            <div class="service-full-card reveal reveal-delay-3" style="grid-template-columns:1fr; gap:20px; padding:36px 32px;">
-                <div class="service-full-left">
-                    <span class="number" style="font-size:56px;">05</span>
-                    <h3>Tax Strategy</h3>
-                </div>
-                <div class="service-full-right">
-                    <p class="teaser">How do we ensure no unnecessary costs or inefficiencies?</p>
-                    <p>We optimise our tax arrangements to reduce liabilities and enhance efficiency. We partner with external cross-border tax advisors to ensure no unnecessary costs or inefficiencies.</p>
-                </div>
-            </div>
-
-        </div><!-- .services-grid-3col -->
-    </div>
-</section>
-
-
-<!-- ═══════════════════════════════════════
-     CTA STRIP
-═══════════════════════════════════════ -->
-<section class="cta-strip" aria-labelledby="services-cta-heading">
-    <div class="container">
-        <div class="reveal">
-            <span class="eyebrow">One Family. One Conversation.</span>
-            <h2 id="services-cta-heading">We welcome dialogue with like-minded families, advisors, and partners</h2>
-            <p>We are a single family office and do not solicit external clients — but we are always open to a conversation with those who share our values and outlook.</p>
-            <a href="<?php echo esc_url( home_url( '/contact/' ) ); ?>" class="btn btn-primary">Start a conversation</a>
+<section class="page-hero" aria-labelledby="approach-title">
+    <div class="container page-hero-grid">
+        <div class="page-hero-copy">
+            <span class="eyebrow reveal" data-i18n="approach.hero.eyebrow">Investment approach</span>
+            <h1 id="approach-title" class="reveal reveal-delay-1" data-i18n="approach.hero.title">One portfolio.<br><em class="accent-gold">A connected view.</em></h1>
+            <p class="reveal reveal-delay-2" data-i18n="approach.hero.body">We consider each decision in the context of family objectives, portfolio resilience, liquidity, risk, and a multi-generational time horizon.</p>
         </div>
+        <div class="page-hero-media reveal reveal-delay-2"><img src="<?php echo esc_url( get_template_directory_uri() . '/assets/images/mcm-capital-allocation.jpg' ); ?>" alt="Connected stone pathways representing a balanced allocation framework" width="1536" height="1024"></div>
+    </div>
+</section>
+
+<section class="section--white" aria-labelledby="approach-focus-title">
+    <div class="container">
+        <div class="mandate-note reveal"><span class="mark" aria-hidden="true">✦</span><div><strong data-i18n="approach.note.title">Our own family mandate</strong><p data-i18n="approach.note.body">The areas below describe how MCM thinks about and coordinates its own capital. They are not external services, investment products, or packages.</p></div></div>
+        <div class="section-intro reveal"><span class="eyebrow" data-i18n="approach.focus.eyebrow">Connected dimensions</span><h2 id="approach-focus-title" data-i18n="approach.focus.title">How we frame family capital</h2><p data-i18n="approach.focus.body">The precise mix evolves with circumstances. The underlying emphasis on clarity, alignment, and long-term judgment remains.</p></div>
+
+        <div class="focus-list">
+            <article class="focus-row reveal"><div class="focus-row-title"><span class="number">01</span><h3 data-i18n="focus.1.title">Family Office Stewardship</h3></div><div class="focus-row-copy"><p data-i18n="focus.1.long">We coordinate our own family affairs, governance, reporting, and adviser relationships so decisions can remain coherent as circumstances evolve.</p><ul class="focus-points"><li data-i18n="focus.1.tag1">Family governance</li><li data-i18n="focus.1.tag2">Oversight &amp; reporting</li><li data-i18n="focus.1.tag3">Multi-generational context</li></ul></div></article>
+            <article class="focus-row reveal"><div class="focus-row-title"><span class="number">02</span><h3 data-i18n="focus.2.title">Capital Allocation</h3></div><div class="focus-row-copy"><p data-i18n="focus.2.long">We assess liquid and private opportunities as part of one portfolio, balancing return potential with downside, liquidity, concentration, and time horizon.</p><ul class="focus-points"><li data-i18n="focus.2.tag1">Portfolio context</li><li data-i18n="focus.2.tag2">Risk &amp; liquidity</li><li data-i18n="focus.2.tag3">Independent diligence</li></ul></div></article>
+            <article class="focus-row reveal"><div class="focus-row-title"><span class="number">03</span><h3 data-i18n="focus.3.title">Legacy &amp; Continuity</h3></div><div class="focus-row-copy"><p data-i18n="focus.3.long">We consider how values, knowledge, governance, and capital can remain connected across generations, supported by independent legal and trust specialists where needed.</p><ul class="focus-points"><li data-i18n="focus.3.tag1">Values &amp; intent</li><li data-i18n="focus.3.tag2">Knowledge continuity</li><li data-i18n="focus.3.tag3">Independent expertise</li></ul></div></article>
+            <article class="focus-row reveal"><div class="focus-row-title"><span class="number">04</span><h3 data-i18n="focus.4.title">Enterprise Perspective</h3></div><div class="focus-row-copy"><p data-i18n="focus.4.long">We bring a patient-owner mindset to operating businesses and private opportunities, focusing on durable economics, aligned people, governance, and responsible growth.</p><ul class="focus-points"><li data-i18n="focus.4.tag1">Patient ownership</li><li data-i18n="focus.4.tag2">Aligned management</li><li data-i18n="focus.4.tag3">Durable value</li></ul></div></article>
+            <article class="focus-row reveal"><div class="focus-row-title"><span class="number">05</span><h3 data-i18n="focus.5.title">Specialist Coordination</h3></div><div class="focus-row-copy"><p data-i18n="focus.5.long">Where decisions require specialist knowledge, we engage independent legal, tax, investment, and other professionals for our own family needs while retaining responsibility for the final decision.</p><ul class="focus-points"><li data-i18n="focus.5.tag1">Clear roles</li><li data-i18n="focus.5.tag2">Independent advice</li><li data-i18n="focus.5.tag3">Family accountability</li></ul></div></article>
+        </div>
+    </div>
+</section>
+
+<section class="section--dark" aria-labelledby="posture-title">
+    <div class="container criteria-layout">
+        <div class="criteria-copy reveal"><span class="eyebrow" data-i18n="approach.posture.eyebrow">Our posture</span><h2 id="posture-title" data-i18n="approach.posture.title">A broad lens.<br>A selective posture.</h2><p data-i18n="approach.posture.body">We remain open to different structures and asset classes without treating every available opportunity as relevant.</p></div>
+        <div class="criteria-grid reveal reveal-delay-1"><div class="criterion"><strong data-i18n="approach.posture.1.title">Context first</strong><span data-i18n="approach.posture.1.body">Understand portfolio fit before assessing an opportunity in isolation.</span></div><div class="criterion"><strong data-i18n="approach.posture.2.title">Downside matters</strong><span data-i18n="approach.posture.2.body">Consider what can go wrong, not only what may go right.</span></div><div class="criterion"><strong data-i18n="approach.posture.3.title">People matter</strong><span data-i18n="approach.posture.3.body">Alignment, judgment, and transparency shape long-term outcomes.</span></div><div class="criterion"><strong data-i18n="approach.posture.4.title">Patience has value</strong><span data-i18n="approach.posture.4.body">A family horizon allows us to look beyond short-term pressure.</span></div></div>
+    </div>
+</section>
+
+<section class="cta-band" aria-labelledby="approach-cta-title">
+    <div class="container cta-band-content reveal">
+        <span class="eyebrow" data-i18n="approach.cta.eyebrow">Relevant opportunities</span>
+        <h2 id="approach-cta-title" data-i18n="approach.cta.title">Does an opportunity align with this perspective?</h2>
+        <p data-i18n="approach.cta.body">We welcome concise, relevant introductions. Every opportunity is considered independently and subject to our own review.</p>
+        <div class="btn-group"><a href="<?php echo esc_url( home_url( '/promotions/' ) ); ?>" class="btn btn-primary" data-i18n="approach.cta.primary">Partnerships &amp; opportunities</a><a href="<?php echo esc_url( home_url( '/contact/' ) ); ?>" class="btn btn-secondary" data-i18n="approach.cta.secondary">Make an introduction</a></div>
     </div>
 </section>
 

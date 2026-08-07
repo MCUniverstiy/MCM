@@ -1,99 +1,111 @@
-/* MCM Wealth — main.js */
-
+/* MCM Wealth Management — shared interactions */
 (function () {
   'use strict';
 
-  /* ── Scroll Reveal ── */
-  var revealObserver = new IntersectionObserver(
-    function (entries) {
+  document.documentElement.classList.add('js');
+
+  function initReveal() {
+    var elements = document.querySelectorAll('.reveal');
+    if (!elements.length) return;
+
+    if (!('IntersectionObserver' in window) || window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+      elements.forEach(function (element) { element.classList.add('in'); });
+      return;
+    }
+
+    var observer = new IntersectionObserver(function (entries) {
       entries.forEach(function (entry) {
         if (entry.isIntersecting) {
           entry.target.classList.add('in');
-          revealObserver.unobserve(entry.target);
+          observer.unobserve(entry.target);
         }
       });
-    },
-    { threshold: 0.12, rootMargin: '0px 0px -40px 0px' }
-  );
+    }, { threshold: 0.12, rootMargin: '0px 0px -36px' });
 
-  function initReveal() {
-    var els = document.querySelectorAll('.reveal');
-    els.forEach(function (el) {
-      /* Elements already in viewport on load get .in immediately */
-      var rect = el.getBoundingClientRect();
-      if (rect.top < window.innerHeight - 40) {
-        el.classList.add('in');
-      } else {
-        revealObserver.observe(el);
-      }
-    });
+    elements.forEach(function (element) { observer.observe(element); });
   }
 
-  /* ── Sticky Header ── */
-  function initStickyHeader() {
+  function initHeader() {
     var header = document.querySelector('.site-header');
     if (!header) return;
-    function onScroll() {
-      if (window.scrollY > 10) {
-        header.classList.add('scrolled');
-      } else {
-        header.classList.remove('scrolled');
-      }
+
+    function updateHeader() {
+      header.classList.toggle('scrolled', window.scrollY > 12);
     }
-    window.addEventListener('scroll', onScroll, { passive: true });
-    onScroll();
+
+    window.addEventListener('scroll', updateHeader, { passive: true });
+    updateHeader();
   }
 
-  /* ── Mobile Hamburger ── */
   function initMobileNav() {
     var toggle = document.querySelector('.nav-toggle');
-    if (!toggle) return;
+    var navigation = document.getElementById('primary-navigation');
+    if (!toggle || !navigation) return;
+
+    function setOpen(open) {
+      document.body.classList.toggle('nav-open', open);
+      toggle.setAttribute('aria-expanded', open ? 'true' : 'false');
+      toggle.setAttribute('aria-label', open ? 'Close navigation' : 'Open navigation');
+    }
+
     toggle.addEventListener('click', function () {
-      document.body.classList.toggle('nav-open');
-      var expanded = document.body.classList.contains('nav-open');
-      toggle.setAttribute('aria-expanded', expanded ? 'true' : 'false');
+      setOpen(!document.body.classList.contains('nav-open'));
     });
 
-    /* Close menu on nav link click */
-    var links = document.querySelectorAll('.header-nav .nav-menu a');
-    links.forEach(function (link) {
-      link.addEventListener('click', function () {
-        document.body.classList.remove('nav-open');
-        toggle.setAttribute('aria-expanded', 'false');
-      });
+    navigation.addEventListener('click', function (event) {
+      if (event.target.closest('a')) setOpen(false);
     });
 
-    /* Close on outside click */
-    document.addEventListener('click', function (e) {
-      if (
-        document.body.classList.contains('nav-open') &&
-        !e.target.closest('.header-nav') &&
-        !e.target.closest('.nav-toggle')
-      ) {
-        document.body.classList.remove('nav-open');
-        toggle.setAttribute('aria-expanded', 'false');
+    document.addEventListener('keydown', function (event) {
+      if (event.key === 'Escape' && document.body.classList.contains('nav-open')) {
+        setOpen(false);
+        toggle.focus();
+      }
+    });
+
+    window.addEventListener('resize', function () {
+      if (window.innerWidth > 820) setOpen(false);
+    });
+  }
+
+  function initBackToTop() {
+    var button = document.getElementById('mcm-top');
+    if (!button) return;
+
+    function updateButton() {
+      button.classList.toggle('is-visible', window.scrollY > 520);
+    }
+
+    window.addEventListener('scroll', updateButton, { passive: true });
+    button.addEventListener('click', function () {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+    updateButton();
+  }
+
+  function initStaticContactForm() {
+    var form = document.querySelector('[data-static-contact]');
+    if (!form) return;
+
+    form.addEventListener('submit', function (event) {
+      if (!form.checkValidity()) {
+        event.preventDefault();
+        form.reportValidity();
       }
     });
   }
 
-  /* ── Contact Form Client-side ── */
-  function initContactForm() {
-    var form = document.querySelector('.contact-form');
-    if (!form) return;
-
-    form.addEventListener('submit', function (e) {
-      /* Allow normal PHP submission; just clear any old messages */
-      var old = form.querySelector('.form-success, .form-error');
-      if (old) old.remove();
-    });
+  function init() {
+    initReveal();
+    initHeader();
+    initMobileNav();
+    initBackToTop();
+    initStaticContactForm();
   }
 
-  /* ── Back to Top ── */
-  /* ── Init ── */
-  document.addEventListener('DOMContentLoaded', function () {
-    initReveal();
-    initStickyHeader();
-    initMobileNav();
-    initContactForm();
-  });
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', init);
+  } else {
+    init();
+  }
 })();

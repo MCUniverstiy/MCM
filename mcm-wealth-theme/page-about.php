@@ -72,8 +72,8 @@ get_header();
     <div class="container cta-band-content reveal">
         <span class="eyebrow" data-i18n="about.cta.eyebrow">Exchange &amp; collaboration</span>
         <h2 id="about-cta-title" data-i18n="about.cta.title">We value thoughtful, relevant dialogue.</h2>
-        <p data-i18n="about.cta.body">MCM welcomes introductions to investment opportunities, family-office peers, and specialists whose perspective may be mutually valuable.</p>
-        <div class="btn-group"><a href="<?php echo esc_url( home_url( '/promotions/' ) ); ?>" class="btn btn-primary" data-i18n="nav.partnerships">Partnerships</a><a href="<?php echo esc_url( home_url( '/contact/' ) ); ?>" class="btn btn-secondary" data-i18n="nav.contact">Contact</a></div>
+        <p data-i18n="about.cta.body">MCM welcomes independent single family offices interested in relevant community connection and perspective exchange.</p>
+        <div class="btn-group"><a href="<?php echo esc_url( home_url( '/perspectives/' ) ); ?>" class="btn btn-primary" data-i18n="nav.partnerships">Perspectives</a><a href="<?php echo esc_url( home_url( '/contact/' ) ); ?>" class="btn btn-secondary" data-i18n="nav.contact">Contact</a></div>
     </div>
 </section>
 

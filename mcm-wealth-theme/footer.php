@@ -19,19 +19,20 @@
                 <nav class="footer-links" aria-label="<?php esc_attr_e( 'Footer company links', 'mcm-wealth-theme' ); ?>">
                     <a href="<?php echo esc_url( home_url( '/' ) ); ?>" data-i18n="nav.home">Home</a>
                     <a href="<?php echo esc_url( home_url( '/about-us/' ) ); ?>" data-i18n="nav.about">About</a>
-                    <a href="<?php echo esc_url( home_url( '/services/' ) ); ?>" data-i18n="nav.approach">Investment Approach</a>
-                    <a href="<?php echo esc_url( home_url( '/promotions/' ) ); ?>" data-i18n="nav.partnerships">Partnerships</a>
+                    <a href="<?php echo esc_url( home_url( '/investment-approach/' ) ); ?>" data-i18n="nav.approach">Investment Approach</a>
+                    <a href="<?php echo esc_url( home_url( '/perspectives/' ) ); ?>" data-i18n="nav.partnerships">Perspectives</a>
+                    <a href="<?php echo esc_url( home_url( '/privacy/' ) ); ?>">Privacy</a>
                 </nav>
             </div>
 
             <div class="footer-col">
                 <span class="footer-col-title" data-i18n="footer.perspective">Our Perspective</span>
                 <nav class="footer-links" aria-label="<?php esc_attr_e( 'Investment approach links', 'mcm-wealth-theme' ); ?>">
-                    <a href="<?php echo esc_url( home_url( '/services/' ) ); ?>" data-i18n="focus.1.title">Family Office Stewardship</a>
-                    <a href="<?php echo esc_url( home_url( '/services/' ) ); ?>" data-i18n="focus.2.title">Capital Allocation</a>
-                    <a href="<?php echo esc_url( home_url( '/services/' ) ); ?>" data-i18n="focus.3.title">Legacy &amp; Continuity</a>
-                    <a href="<?php echo esc_url( home_url( '/services/' ) ); ?>" data-i18n="focus.4.title">Enterprise Perspective</a>
-                    <a href="<?php echo esc_url( home_url( '/services/' ) ); ?>" data-i18n="focus.5.title">Specialist Coordination</a>
+                    <a href="<?php echo esc_url( home_url( '/investment-approach/' ) ); ?>" data-i18n="focus.1.title">Family Office Stewardship</a>
+                    <a href="<?php echo esc_url( home_url( '/investment-approach/' ) ); ?>" data-i18n="focus.2.title">Capital Allocation</a>
+                    <a href="<?php echo esc_url( home_url( '/investment-approach/' ) ); ?>" data-i18n="focus.3.title">Legacy &amp; Continuity</a>
+                    <a href="<?php echo esc_url( home_url( '/investment-approach/' ) ); ?>" data-i18n="focus.4.title">Enterprise Perspective</a>
+                    <a href="<?php echo esc_url( home_url( '/investment-approach/' ) ); ?>" data-i18n="focus.5.title">Specialist Coordination</a>
                 </nav>
             </div>
 

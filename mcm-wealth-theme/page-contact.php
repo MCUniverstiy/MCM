@@ -15,9 +15,8 @@ $form_fields = [
 ];
 
 $interest_options = [
-    'investment-opportunity' => 'Investment opportunity',
-    'family-office-exchange' => 'Family-office exchange',
-    'specialist-collaboration' => 'Specialist collaboration',
+    'sfo-community' => 'SFO community connection',
+    'peer-exchange' => 'Peer perspective exchange',
     'general-enquiry' => 'General enquiry',
 ];
 
@@ -39,6 +38,8 @@ if ( isset( $_POST['mcm_contact_submit'] ) ) {
             $form_error = 'Please enter a valid email address.';
         } elseif ( ! isset( $interest_options[ $interest ] ) ) {
             $form_error = 'Please choose a reason for contacting us.';
+        } elseif ( empty( $_POST['mcm_privacy'] ) || 'yes' !== sanitize_text_field( wp_unslash( $_POST['mcm_privacy'] ) ) ) {
+            $form_error = 'Please read and acknowledge the Privacy Notice.';
         } elseif ( empty( $message ) ) {
             $form_error = 'Please enter a message.';
         } else {
@@ -68,8 +69,8 @@ if ( isset( $_POST['mcm_contact_submit'] ) ) {
 <section class="page-hero" aria-labelledby="contact-title">
     <div class="container">
         <span class="eyebrow reveal" data-i18n="contact.hero.eyebrow">Contact MCM</span>
-        <h1 id="contact-title" class="reveal reveal-delay-1" data-i18n="contact.hero.title">Open to ideas, exchange,<br><em class="accent-gold">and aligned partnership.</em></h1>
-        <p class="reveal reveal-delay-2" data-i18n="contact.hero.body">Get in touch to introduce a relevant investment opportunity, connect as a family-office peer, explore specialist collaboration, or make a general enquiry.</p>
+        <h1 id="contact-title" class="reveal reveal-delay-1" data-i18n="contact.hero.title">A bridge for SFO peers.<br><em class="accent-gold">A community, not a service.</em></h1>
+        <p class="reveal reveal-delay-2" data-i18n="contact.hero.body">Get in touch to connect as a single-family-office peer, suggest a relevant community introduction, exchange perspectives, or make a general enquiry.</p>
     </div>
 </section>
 
@@ -126,7 +127,11 @@ if ( isset( $_POST['mcm_contact_submit'] ) ) {
 
                         <div class="form-group">
                             <label for="mcm_message" data-i18n="contact.form.message">Message *</label>
-                            <textarea id="mcm_message" name="mcm_message" required data-i18n-placeholder="contact.form.message_placeholder" placeholder="Briefly introduce the opportunity, perspective, or reason for contacting us."><?php echo esc_textarea( $form_fields['message'] ); ?></textarea>
+                            <textarea id="mcm_message" name="mcm_message" required data-i18n-placeholder="contact.form.message_placeholder" placeholder="Briefly introduce your family office and the reason for connecting."><?php echo esc_textarea( $form_fields['message'] ); ?></textarea>
+                        </div>
+
+                        <div class="form-group form-consent">
+                            <label><input name="mcm_privacy" type="checkbox" value="yes" required> <span>I have read the <a href="<?php echo esc_url( home_url( '/privacy/' ) ); ?>">Privacy Notice</a> and understand how my information will be used. *</span></label>
                         </div>
 
                         <div class="form-submit">
@@ -142,16 +147,16 @@ if ( isset( $_POST['mcm_contact_submit'] ) ) {
             <span class="eyebrow" data-i18n="contact.panel.eyebrow">Relevant conversations</span>
             <h3 data-i18n="contact.panel.title">Good reasons to connect</h3>
             <ul class="expect-list">
-                <li class="expect-item"><span class="expect-icon" aria-hidden="true">01</span><div><strong data-i18n="contact.panel.1.title">Share an opportunity</strong><span data-i18n="contact.panel.1.body">Introduce a company, fund, direct transaction, or other relevant idea.</span></div></li>
-                <li class="expect-item"><span class="expect-icon" aria-hidden="true">02</span><div><strong data-i18n="contact.panel.2.title">Exchange perspective</strong><span data-i18n="contact.panel.2.body">Connect as a family-office peer around questions of mutual relevance.</span></div></li>
-                <li class="expect-item"><span class="expect-icon" aria-hidden="true">03</span><div><strong data-i18n="contact.panel.3.title">Explore collaboration</strong><span data-i18n="contact.panel.3.body">Introduce specialist capabilities that may support our own mandate.</span></div></li>
+                <li class="expect-item"><span class="expect-icon" aria-hidden="true">01</span><div><strong data-i18n="contact.panel.1.title">SFO community</strong><span data-i18n="contact.panel.1.body">Connect with independent peers around questions of mutual relevance.</span></div></li>
+                <li class="expect-item"><span class="expect-icon" aria-hidden="true">02</span><div><strong data-i18n="contact.panel.2.title">Trusted introduction</strong><span data-i18n="contact.panel.2.body">Suggest a connection between family offices, subject to mutual consent.</span></div></li>
+                <li class="expect-item"><span class="expect-icon" aria-hidden="true">03</span><div><strong data-i18n="contact.panel.3.title">General enquiry</strong><span data-i18n="contact.panel.3.body">Contact MCM about its website or its own family mandate.</span></div></li>
             </ul>
             <div class="panel-divider"></div>
-            <p class="panel-quote" data-i18n="contact.panel.quote">“Private capital. Shared perspective.”</p>
+            <p class="panel-quote" data-i18n="contact.panel.quote">“Independent offices. Shared perspective.”</p>
         </aside>
     </div>
 </section>
 
-<div class="compliance-strip"><div class="container"><p data-i18n="contact.disclaimer">Contacting MCM does not create an advisory, fiduciary, client, or investment relationship. Any potential opportunity or collaboration remains subject to independent review and appropriate documentation.</p></div></div>
+<div class="compliance-strip"><div class="container"><p data-i18n="contact.disclaimer">Contacting MCM does not create an advisory, fiduciary, client, brokerage, referral, or investment relationship. Community connections are introductions between independent peers only.</p></div></div>
 
 <?php get_footer(); ?>

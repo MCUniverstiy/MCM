@@ -111,6 +111,8 @@ function mcm_nav_key( $title ) {
         'promotions'              => 'partnerships',
         'partnerships'            => 'partnerships',
         'partnerships & opportunities' => 'partnerships',
+        'perspectives'             => 'partnerships',
+        'perspectives & community' => 'partnerships',
         'contact'                 => 'contact',
         'contact us'              => 'contact',
     ];
@@ -123,7 +125,7 @@ function mcm_public_nav_label( $key ) {
         'home'         => 'Home',
         'about'        => 'About',
         'approach'     => 'Investment Approach',
-        'partnerships' => 'Partnerships',
+        'partnerships' => 'Perspectives',
         'contact'      => 'Contact',
     ];
 
@@ -159,8 +161,8 @@ add_filter( 'nav_menu_link_attributes', 'mcm_filter_nav_attributes', 10, 4 );
 
 function mcm_language_switch_markup() {
     return '<li><div class="lang-switch" role="group" aria-label="切換語言 / Switch language">'
-        . '<button type="button" class="lang-option is-active" onclick="switchLang(\'en\')" aria-label="English">EN</button>'
-        . '<button type="button" class="lang-option" onclick="switchLang(\'zh\')" aria-label="繁體中文">中</button>'
+        . '<button type="button" class="lang-option is-active" data-lang="en" aria-label="English">EN</button>'
+        . '<button type="button" class="lang-option" data-lang="zh" aria-label="繁體中文">中</button>'
         . '</div></li>';
 }
 
@@ -176,8 +178,8 @@ function mcm_fallback_nav( $args ) {
     $pages = [
         [ 'key' => 'home',         'url' => home_url( '/' ),            'current' => is_front_page() ],
         [ 'key' => 'about',        'url' => home_url( '/about-us/' ),   'current' => is_page( 'about-us' ) ],
-        [ 'key' => 'approach',     'url' => home_url( '/services/' ),   'current' => is_page( 'services' ) ],
-        [ 'key' => 'partnerships', 'url' => home_url( '/promotions/' ), 'current' => is_page( 'promotions' ) ],
+        [ 'key' => 'approach',     'url' => home_url( '/investment-approach/' ),   'current' => is_page( [ 'investment-approach', 'services' ] ) ],
+        [ 'key' => 'partnerships', 'url' => home_url( '/perspectives/' ), 'current' => is_page( [ 'perspectives', 'promotions' ] ) ],
         [ 'key' => 'contact',      'url' => home_url( '/contact/' ),    'current' => is_page( 'contact' ) ],
     ];
 
@@ -193,3 +195,31 @@ function mcm_fallback_nav( $args ) {
 }
 
 define( 'MCM_CONTACT_NONCE', 'mcm_contact_form' );
+
+/** Production hardening and basic discoverability metadata. */
+function mcm_security_headers() {
+    if ( headers_sent() ) {
+        return;
+    }
+    header( 'X-Content-Type-Options: nosniff' );
+    header( 'X-Frame-Options: SAMEORIGIN' );
+    header( 'Referrer-Policy: strict-origin-when-cross-origin' );
+    header( 'Permissions-Policy: camera=(), microphone=(), geolocation=(), payment=()' );
+}
+add_action( 'send_headers', 'mcm_security_headers' );
+
+function mcm_document_metadata() {
+    if ( is_admin() ) {
+        return;
+    }
+    $canonical = is_front_page() ? home_url( '/' ) : get_permalink();
+    $title     = wp_get_document_title();
+    $summary   = 'MCM Wealth Management Limited is a Hong Kong single family office serving one family and connecting with SFO peers as a community.';
+    echo '<link rel="canonical" href="' . esc_url( $canonical ) . '">' . "\n";
+    echo '<meta name="description" content="' . esc_attr( $summary ) . '">' . "\n";
+    echo '<meta property="og:type" content="website">' . "\n";
+    echo '<meta property="og:title" content="' . esc_attr( $title ) . '">' . "\n";
+    echo '<meta property="og:description" content="' . esc_attr( $summary ) . '">' . "\n";
+    echo '<meta property="og:url" content="' . esc_url( $canonical ) . '">' . "\n";
+}
+add_action( 'wp_head', 'mcm_document_metadata', 2 );

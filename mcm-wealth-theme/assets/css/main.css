@@ -86,8 +86,14 @@ a {
 }
 
 :focus-visible {
-  outline: 3px solid rgba(221, 161, 40, 0.7);
+  outline: 3px solid var(--ember-dark);
   outline-offset: 4px;
+}
+
+.section--dark :focus-visible,
+.site-footer :focus-visible,
+.contact-panel :focus-visible {
+  outline-color: var(--amber);
 }
 
 ::selection {
@@ -1504,6 +1510,41 @@ p {
   font-size: 12px;
 }
 
+.form-consent label {
+  display: grid;
+  grid-template-columns: 20px 1fr;
+  align-items: start;
+  gap: 10px;
+  font-size: 13px;
+}
+
+.form-consent input {
+  width: 18px;
+  height: 18px;
+  margin-top: 2px;
+}
+
+.form-consent a,
+.legal-copy a {
+  color: var(--ember-dark);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.btn:disabled {
+  cursor: wait;
+  opacity: 0.65;
+}
+
+.legal-copy h2 {
+  margin: 48px 0 16px;
+  font-size: clamp(26px, 3vw, 36px);
+}
+
+.legal-copy p + p {
+  margin-top: 16px;
+}
+
 .form-success,
 .form-error {
   margin-bottom: 24px;
@@ -1689,7 +1730,7 @@ p {
   display: block;
   margin-bottom: 20px;
   color: var(--amber);
-  font-size: 9px;
+  font-size: 11px;
   font-weight: 700;
   letter-spacing: 0.15em;
   text-transform: uppercase;
@@ -1703,8 +1744,8 @@ p {
 
 .footer-links a,
 .footer-contact-item .fvalue {
-  color: var(--text-on-dark-muted);
-  font-size: 12px;
+  color: rgba(255, 250, 242, 0.82);
+  font-size: 13px;
   transition: color var(--transition);
 }
 
@@ -1718,7 +1759,7 @@ p {
 }
 
 .footer-contact-item .flabel {
-  color: rgba(255, 250, 242, 0.38);
+  color: rgba(255, 250, 242, 0.72);
 }
 
 .footer-bottom {
@@ -1732,8 +1773,8 @@ p {
 
 .footer-bottom .copyright,
 .footer-bottom .disclaimer {
-  color: rgba(255, 250, 242, 0.43);
-  font-size: 10px;
+  color: rgba(255, 250, 242, 0.74);
+  font-size: 12px;
 }
 
 .footer-bottom .disclaimer {
